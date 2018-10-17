@@ -8,10 +8,18 @@ def dividir(dividendo, divisor):
     primerValor = dividendo
     cociente = 0
     while dividendo >= divisor:
-        dividendo = dividendo - divisor
-        cociente = cociente + 1
+        if divisor > 0:
+            dividendo = dividendo - divisor
+            cociente = cociente + 1
+        if divisor < 0:
+            print("Este programa no acepta numeros negativos")
+            break
+        if divisor == 0:
+            print("Math Error")
+            break
     residuo = dividendo
-    print("%d / %d = %d, sobra %d" % (primerValor, divisor, cociente, residuo))
+    if divisor > 0:
+        print("%d / %d = %d, sobra %d" % (primerValor, divisor, cociente, residuo))
     print("")
 
 
