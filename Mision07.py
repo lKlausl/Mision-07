@@ -18,9 +18,12 @@ def dividir(dividendo, divisor):
             print("Math Error")
             break
     residuo = dividendo
-    if divisor > 0:
+    if divisor > 0 and dividendo >= 0:
         print("%d / %d = %d, sobra %d" % (primerValor, divisor, cociente, residuo))
-    print("")
+        print("")
+    if dividendo < 0:
+        print("Este programa no acepta numeros negativos")
+        print("")
 
 
 #Esta función recibe una lista de números y regresa el número máximo
